@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #010101;
+    overflow-x: hidden; 
+}
+
+/* Global Styles */
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 50;
+}
+
+nav {
+    min-height: 70px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+}
+
+nav a {
+    color: white;
+}
+
+
+nav .logo {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-left: -100px;
+
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    padding-right: 30px;
+    margin-left: 50px;
+}
+
+
+nav li a:hover {
+    color: rgb(199, 199, 199);
+}
+
+nav .action_btn{
+    margin-right: -70px;
+}
+
+.action_btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffc0cb;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: white;
+}
+
+.action_btn:hover {
+    background-color: #ffd2da;
+    transition: 0.3s ease;
+}
+
+.action_btn:not(:hover){
+    background-color: #ffc0cb;
+    transition: 0.3s ease;
+}
+
+/* Seccion Principal */
+.contenedor {
+    width: 100%;
+    min-height: 740px;
+    background: url(../images/Inicio-Loperez-Sitio-Web.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.principal h1 {
+    font-size: 9rem;
+    margin-top: -13rem;
+}
+
+.linea-bienvenidos{
+    width: 178px;
+    border-bottom: 4px solid white
+}
+
+.principal p {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.botones{
+    text-align: center;
+    margin-right: 195px;
+    gap: 100px;
+}
+
+.botones .action_btn {
+    padding: 12px 20px;
+    background-color: rgba(128, 128, 128, 0.348);
+    font-size: 1.5rem;
+}
+
+.botones .action_btn:hover {
+    background-color: #ffc0cb;
+}
+
+/* Nuestro Enfoque */
+.contenedorenfoque {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #010101;
+    overflow: hidden;
+}
+
+.imagen{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.imagen img {
+    max-height: 100%;
+    max-width: 750px;
+}
+
+.enfoque {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.enfoque h2 {
+    margin-bottom: 5px;
+    color: white;
+    font-size: 5rem;
+}
+
+.enfoque p {
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.linea-enfoque {
+    width: 103px;
+    border-bottom: 3px solid white;
+}
+
+/* ¿Por qué Nosotros? */
+.contenedor-porque{
+    max-width: 100%;
+    min-height: 680px;
+    background: url(../images/contenedor-porque.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+}
+
+.contenedor-porque .contenedor-texto{
+    margin: 80px 80px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: rgb(230, 230, 230);
+}
+
+.contenedor-texto h3{
+    font-size: 5rem;
+    display: inline;
+}
+
+.linea-nosotros{
+    width: 201px;
+    border-bottom: 3px solid rgb(230, 230, 230);
+    margin: 1px 214px;
+}
+
+.texto-porque p{
+    margin-top: 270px;
+    margin-left: 500px;
+    font-size: 2.2rem;
+    color: rgb(230, 230, 230);
+}
+
+/* Footer */
+footer{
+    max-width: 1400px;
+    background-color: #010101;
+}
+
+.footer{
+    width: 100%;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.footer-top ul{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.footer-top ul li i, p{
+    display: inline-block;
+    font-size: 2rem;
+    color: rgb(72, 72, 72);
+}
+
+
+.copyright{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.footer-bottom{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.linea-footer{
+    border-bottom: 1px solid rgb(72, 72, 72);
+    width: 120px;
+    margin-bottom: 12px;
+}
+
+.footer-bottom p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Página Servicios */
+
+/* Section Principal */
+.contenedor-servicios {
+    width: 100%;
+    min-height: 650px;
+    background: url(../images/servicios-loperez.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+}
+
+.servicios{
+    font-size: 4rem;
+    margin-top: 355px;
+    margin-left: 35px;
+}
+
+/* Identidad */
+
+.contenedor-identidad-diseño{
+    background-color: #010101;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.contenedor-identidad{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.identidad{
+    font-size: 3.5rem;
+    padding: 0;
+    color: white;
+    margin: 100px 0 0 100px;
+}
+
+.imagen-identidad{
+    padding: 0;
+    width: 55%;
+    max-height: 650px;
+}
+
+.imagen-identidad img{
+    margin-right: 0;
+    width: 100%;
+    max-height: 650px;
+}
+
+.identidad p{
+    color: white;
+    margin-top: 40px;
+    font-size: 2.2rem;
+}
+
+.linea-identidad{
+    width: 118px;
+    border-bottom: 3px solid white;
+    margin-top: 5px;
+}
+
+.botones-servicios .action_btn{
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    margin-top: 10px;
+}
+
+/* Diseño */
+.contenedor-diseño{
+    width: 100%;
+    padding: 0;
+}
+
+.contenedor-diseño-contenido{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-imagen-diseño{
+    width: 70%;
+}
+
+.contenedor-imagen-diseño img{
+    display: block;
+    width: 100%;
+    max-height: 650px;
+}
+
+.contenedor-diseño-texto{
+    margin: 105px 0 0 100px;
+}
+
+.contenedor-diseño-texto h2{
+    color: white;
+    font-size: 5rem;
+}
+
+.linea-diseño{
+    width: 152px;
+    border-bottom: 3px solid white;
+    margin-top: 5px;
+}
+
+.contenedor-diseño-texto p{
+    color: white;
+    font-size: 2.2rem;
+    margin-top: 40px;
+}
+
+/* Pagina Sobre Nosotros */
+.contenedor-somos{
+    max-width: 100%;
+    min-height: 650px;
+    background: url(../images/Somos.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    font-size: 5rem;
+}
+
+.texto-somos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: black;
+    margin: 60px;
+}
+
+.linea-somos{
+    width: 201px;
+    border-bottom: 1px solid gray;
+    margin: 0px 40px;
+    width: 350px;
+}
+
+
+.texto-h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: gray
+}
+
+.texto-h2 h2{
+    text-align: center;
+    font-size: 2.1rem;
+}
+
+.contenedor-sobrenosotros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 0 150px;
+    margin: 110px 0;
+}
+
+.imagen-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen-sobre img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.imagen-sobre p {
+    margin-top: 10px;
+    color: gray;
+    font-size: 1.6rem;
+}
+
+/* Página Proyectos */
+.contenedor-proyectos{
+    width: 100%;
+    min-height: 700px;
+    background: url(../images/proyectos.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectos h1{
+    margin-left: 720px;
+    margin-top: 200px;
+    color: rgb(255, 255, 255);
+    font-size: 6.5rem;
+}
+
+.contenedor-proyec{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    background-color: gray;
+}
+
+.proyecto1{
+    width: 50%;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.396);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 2px solid black;
+    font-size: 2.6rem;
+}
+
+.proyecto2{
+    width: 50%;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.129);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-left: 2px solid black;
+    font-size: 2.6rem;
+    
+}
+
+
+/* Página Contacto */
+.contenedor-contacto{
+    width: 100%;
+    min-height: 720px;
+    background: url(../images/Inicio-Loperez-Sitio-Web.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form{
+    width: 30%;
+    margin-bottom: 60px;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 38px;
+}
+
+.form-field label {
+    position: absolute;
+    top: -27px;
+    left: 0;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.561);
+    pointer-events: none;
+}
+
+.form-field input, .form-field textarea {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.form-field input:focus, .form-field textarea:focus{
+    font-size: 2rem;
+}
+
+.form-field .border-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.809);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.809);
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    display: block;
+    margin-left: auto;
+}
+
+button:hover{
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+button:not(:hover){
+    background-color: rgba(255, 255, 255, 0.809);
+    transition: 0.3s ease;
+}
