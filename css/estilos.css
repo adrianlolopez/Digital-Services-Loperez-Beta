@@ -26,13 +26,16 @@ li {
 }
 
 /* Header */
-header {
+
+.header {
+    grid-area: header;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding-top: 10px;
-    z-index: 50;
+    font-size: 1.6rem;
+    z-index: 100;
 }
 
 nav {
@@ -42,11 +45,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.6rem;
+}
+
+.navbar{
+    display: none;
 }
 
 nav a {
     color: white;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
 }
 
 
@@ -54,24 +63,28 @@ nav .logo {
     font-size: 2.8rem;
     font-weight: bold;
     margin-left: -100px;
-
+    margin-bottom: 10px ;
 }
 
 nav ul {
     display: flex;
     gap: 40px;
-    padding-right: 30px;
-    margin-left: 50px;
+    padding-right: 5px;
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
 
 nav li a:hover {
     color: rgb(199, 199, 199);
+    border-bottom-color: rgb(168, 166, 166);
 }
 
-nav .action_btn{
+.contactar{
     margin-right: -70px;
+    margin-bottom: 12px;
 }
+
 
 .action_btn {
     display: inline-block;
@@ -93,11 +106,43 @@ nav .action_btn{
     transition: 0.3s ease;
 }
 
+/* Inicio */
+
 /* Seccion Principal */
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "contenedor-enfoque-porque"
+        "footer-grid";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    overflow-x: hidden;
+}
+
+.contenedor-enfoque-porque{
+    grid-area: contenedor-enfoque-porque;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #010101;
+    overflow: hidden;
+}
+
 .contenedor {
     width: 100%;
-    min-height: 740px;
-    background: url(../images/Inicio-Loperez-Sitio-Web.jpg);
+    min-height: 700px;
+    background: url(../images/beach.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -107,9 +152,14 @@ nav .action_btn{
     color: white;
 }
 
+.principal{
+    margin-top: 90px;
+}
+
 .principal h1 {
     font-size: 9rem;
     margin-top: -13rem;
+    font-weight: bolder;
 }
 
 .linea-bienvenidos{
@@ -124,14 +174,14 @@ nav .action_btn{
 }
 
 .botones{
+    margin-top: 30px;
     text-align: center;
     margin-right: 195px;
-    gap: 100px;
 }
 
 .botones .action_btn {
     padding: 12px 20px;
-    background-color: rgba(128, 128, 128, 0.348);
+    background-color: rgba(128, 128, 128, 0.78);
     font-size: 1.5rem;
 }
 
@@ -141,11 +191,11 @@ nav .action_btn{
 
 /* Nuestro Enfoque */
 .contenedorenfoque {
+    flex: 1;
     width: 100%;
     display: flex;
     align-items: center;
     background-color: #010101;
-    overflow: hidden;
 }
 
 .imagen{
@@ -153,12 +203,16 @@ nav .action_btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 400px;
 }
 
 .imagen img {
-    max-height: 100%;
-    max-width: 750px;
+    height: 400px;
+    max-width: 600px;
+}
+
+.enfoque p br{
+    display: none;
 }
 
 .enfoque {
@@ -173,11 +227,12 @@ nav .action_btn{
     margin-bottom: 5px;
     color: white;
     font-size: 5rem;
+    font-weight: bolder;
 }
 
 .enfoque p {
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 20px;
 }
 
@@ -188,9 +243,10 @@ nav .action_btn{
 
 /* ¿Por qué Nosotros? */
 .contenedor-porque{
+    flex: 1;
     max-width: 100%;
     min-height: 680px;
-    background: url(../images/contenedor-porque.png);
+    background: url(../images/Porque-nosotros.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -200,35 +256,45 @@ nav .action_btn{
 }
 
 .contenedor-porque .contenedor-texto{
-    margin: 80px 80px;
-    width: 100%;
-    padding: 0;
+    width: 550px;
+    height: 250px;
+    padding-right: 30px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    margin-top: 160px;
     color: rgb(230, 230, 230);
+    background-color: #0101019a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.252);
 }
 
 .contenedor-texto h3{
-    font-size: 5rem;
+    font-size: 4rem;
     display: inline;
+    font-weight: bolder;
 }
 
 .linea-nosotros{
-    width: 201px;
-    border-bottom: 3px solid rgb(230, 230, 230);
-    margin: 1px 214px;
+    width: 160px;
+    border-bottom: 2.8px solid rgb(230, 230, 230);
+    margin-left: 150px;
+    margin-top: 5px;
+}
+
+.texto-porque p br{
+    display: none;
 }
 
 .texto-porque p{
-    margin-top: 270px;
-    margin-left: 500px;
-    font-size: 2.2rem;
+    margin-top: 40px;
+    font-size: 1.8rem;
     color: rgb(230, 230, 230);
 }
 
 /* Footer */
-footer{
+.footer-grid{
+    grid-area: footer-grid;
     max-width: 1400px;
     background-color: #010101;
 }
@@ -281,11 +347,23 @@ footer{
 
 /* Página Servicios */
 
+.grid-container-services{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "container-identidad-diseño"
+        "footer-grid";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
 /* Section Principal */
-.contenedor-servicios {
+
+.grid-container-services .main{
     width: 100%;
-    min-height: 650px;
-    background: url(../images/servicios-loperez.png);
+    min-height: 700px;
+    background: url(../images/Pink-Lifeguard-Tower.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -293,53 +371,66 @@ footer{
     justify-content: start;
     align-items: center;
     color: white;
+    display: flex;
 }
 
-.servicios{
-    font-size: 4rem;
-    margin-top: 355px;
-    margin-left: 35px;
+.container-identidad-diseño{
+    grid-area: container-identidad-diseño;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #010101;
+    overflow: hidden;
+}
+
+.servicios h1{
+    font-size: 5.5rem;
+    margin-top: 400px;
+    margin-right: 480px;
+    font-weight: bolder;
 }
 
 /* Identidad */
 
 .contenedor-identidad-diseño{
-    background-color: #010101;
-    padding: 0;
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    background: url(../images/Identidad-Diseño.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0;
 }
 
 
 .contenedor-identidad{
+    width: 100%;
+    min-height: 550px;
     display: flex;
     justify-content: space-between;
     padding: 0;
 }
 
 .identidad{
+    display: inline-block;
     font-size: 3.5rem;
-    padding: 0;
     color: white;
-    margin: 100px 0 0 100px;
+    margin-top: 70px;
+    background-color: #0000006b;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.902);
+    padding: 30px 80px;
 }
 
-.imagen-identidad{
-    padding: 0;
-    width: 55%;
-    max-height: 650px;
-}
-
-.imagen-identidad img{
-    margin-right: 0;
-    width: 100%;
-    max-height: 650px;
-}
 
 .identidad p{
     color: white;
     margin-top: 40px;
     font-size: 2.2rem;
+}
+
+.identidad h2{
+    color: white;
+    font-size: 5rem;
+    font-weight: bolder;
 }
 
 .linea-identidad{
@@ -357,32 +448,39 @@ footer{
 /* Diseño */
 .contenedor-diseño{
     width: 100%;
+    min-height: 550px;
     padding: 0;
 }
 
 .contenedor-diseño-contenido{
+    width: 100%;
     padding: 0;
     display: flex;
-    justify-content: center;
-}
-
-.contenedor-imagen-diseño{
-    width: 70%;
+    justify-content: space-between;
 }
 
 .contenedor-imagen-diseño img{
     display: block;
-    width: 100%;
-    max-height: 650px;
+    width: 500px;
+    max-height: 500px;
 }
 
 .contenedor-diseño-texto{
-    margin: 105px 0 0 100px;
+    display: inline-block;
+    margin-top: 180px;
+    background-color: #0000006b;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.902);
+    padding: 30px 80px;
+}
+
+.botones-servicios{
+    flex-direction: column;
 }
 
 .contenedor-diseño-texto h2{
     color: white;
     font-size: 5rem;
+    font-weight: bolder;
 }
 
 .linea-diseño{
@@ -398,10 +496,22 @@ footer{
 }
 
 /* Pagina Sobre Nosotros */
-.contenedor-somos{
+
+.grid-container-nosotros{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "contenedor-article-somos"
+        "footer-grid";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.grid-container-nosotros .main{
     max-width: 100%;
-    min-height: 650px;
-    background: url(../images/Somos.png);
+    height: 700px;
+    background: url(../images/Somos-Familia-Photo.png);
     background-position: center center;
     background-repeat: no-repeat;
     display: flex;
@@ -409,7 +519,28 @@ footer{
     align-items: center;
     color: white;
     overflow: hidden;
-    font-size: 5rem;
+}
+
+.contenedor-article-somos{
+    max-width: 100%;
+    height: 660px;
+    background: url(../images/Somos-nosotross.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    grid-area: contenedor-article-somos;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main .somos h1{
+    font-size: 7rem;
+    font-size: bold;
+}
+
+.somos{
+    margin-bottom: 10px;
+    margin-left: 800px;
 }
 
 .texto-somos{
@@ -417,23 +548,29 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 0;
-    background-color: black;
-    margin: 60px;
+    background-color: transparent;
 }
 
 .linea-somos{
     width: 201px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(255, 255, 255);
     margin: 0px 40px;
     width: 350px;
 }
 
 
 .texto-h2{
+    background-color: #010101ba;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.144);
+    width: 700px;
+    padding: 45px 60px;
+    padding-bottom: 410px;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: gray
+    color: rgb(255, 255, 255)
 }
 
 .texto-h2 h2{
@@ -445,9 +582,9 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
-    padding: 0 150px;
-    margin: 110px 0;
+    background-color: transparent;
+    padding: 0 350px;
+    margin: -300px 0;
 }
 
 .imagen-sobre {
@@ -458,77 +595,144 @@ footer{
 }
 
 .imagen-sobre img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     border: 2px solid white;
 }
 
 .imagen-sobre p {
     margin-top: 10px;
-    color: gray;
-    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
 }
 
 /* Página Proyectos */
-.contenedor-proyectos{
+
+.grid-container-projects{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "contenedor-proyec"
+        "footer-grid";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+.grid-container-projects .main{
     width: 100%;
     min-height: 700px;
     background: url(../images/proyectos.png);
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .proyectos h1{
-    margin-left: 720px;
-    margin-top: 200px;
+    margin-left: 930px;
+    margin-top: 254px;
     color: rgb(255, 255, 255);
-    font-size: 6.5rem;
+    font-size: 6rem;
+    font-weight: bolder;
 }
 
 .contenedor-proyec{
+    grid-area: contenedor-proyec;
+    background: url(../images/fondo-proyecto.png);
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 0;
     width: 100%;
     display: flex;
-    background-color: gray;
+    justify-content: space-evenly;
 }
 
-.proyecto1{
-    width: 50%;
-    height: 350px;
-    background-color: rgba(255, 255, 255, 0.396);
-    color: black;
-    display: flex;
+.proyecto-1{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 20%;
     align-items: center;
+    display: flex;
     justify-content: center;
     text-align: center;
-    border-right: 2px solid black;
-    font-size: 2.6rem;
 }
 
-.proyecto2{
-    width: 50%;
-    height: 350px;
-    background-color: rgba(255, 255, 255, 0.129);
-    color: black;
-    display: flex;
+.proyecto-1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.proyecto-2{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 20%;
     align-items: center;
+    display: flex;
     justify-content: center;
     text-align: center;
-    border-left: 2px solid black;
-    font-size: 2.6rem;
-    
 }
 
+.proyecto-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.proyecto-3{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 20%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.proyecto-3 img{
+    width: 100%;
+    height: 100%;
+}
+
+.proyecto-4{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 20%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.proyecto-4 img{
+    width: 100%;
+    height: 100%;
+}
 
 /* Página Contacto */
-.contenedor-contacto{
+
+.grid-container-contacto{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer-grid";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.grid-container-contacto .main{
     width: 100%;
     min-height: 720px;
-    background: url(../images/Inicio-Loperez-Sitio-Web.jpg);
+    background: url(../images/Contacto.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -536,18 +740,34 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 
-form{
-    width: 30%;
-    margin-bottom: 60px;
+.background-form {
+    height: 400px;
+    width: 400px;
+    background-color: #00000020; 
+    position: fixed;
+    margin-bottom: 80px; 
+    border-radius: 15%;
+    z-index: -1;
+}
+
+form {
+    width: 380px;
+    margin-bottom: 48px;
+    padding: 33px 20px;
+    background-color: rgba(0, 0, 0, 0.233);
+    border-radius: 6%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.252);
+    position: relative; 
 }
 
 .form-field {
     position: relative;
-    margin-bottom: 38px;
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
 
 .form-field label {
@@ -555,7 +775,7 @@ form{
     top: -27px;
     left: 0;
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.561);
+    color: rgba(255, 255, 255, 0.636);
     pointer-events: none;
 }
 
@@ -563,13 +783,13 @@ form{
     width: 100%;
     border: none;
     background-color: transparent;
-    color: white;
-    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
     transition: 0.3s;
 }
 
 .form-field input:focus, .form-field textarea:focus{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .form-field .border-bottom {
@@ -577,27 +797,163 @@ form{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.809);
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.471);
 }
 
-button {
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.809);
-    color: black;
+.enviar {
+    padding: 10px 25px;
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
-    font-size: 2rem;
-    display: block;
-    margin-left: auto;
+    font-size: 1.7rem;
+    margin-left: 240px;
+    position: relative;
 }
 
-button:hover{
-    background-color: white;
+.enviar:hover{
+    background-color: #ffd2da;
     transition: 0.3s ease;
 }
 
-button:not(:hover){
-    background-color: rgba(255, 255, 255, 0.809);
+.enviar:not(:hover){
+    background-color: #ffc0cb;
     transition: 0.3s ease;
+}
+
+/* Responsive Mobile */
+
+/* Inicio */
+
+/* Navbar */
+@media (max-width: 990px) {
+    nav .logo a{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .navbar{
+        display: block;
+        background:transparent;
+    }
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-brand{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: rgba(22, 22, 22, 0.743);
+    }
+    .navbar-toggler{
+        border: none;
+        color: white;
+    }
+    .navbar-toggler-icon{
+        color: white;
+    }
+    .contenedor{
+        background-image: url(../images/Inicio-Mobile.png);
+        width: 100%;
+        height: 900px;
+    }
+    .principal{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 110px;
+    }
+    .principal h1{
+        font-size: 5rem;
+    }
+    .principal .linea-bienvenidos{
+        margin-left: 16px;
+        width: 98px;
+    }
+    .principal p{
+        font-size: 1.7rem;
+        margin-top: 30px;
+    }
+    .botones{
+        display: flex;
+        margin-right: -10px;
+        margin-top: 70px;
+    }
+    .botones .saber{
+        margin-left: 20px;
+    }
+    .imagen{
+        width: 100%;
+    }
+    .enfoque{
+        margin-left: 38px;
+        margin-top: 120px;
+        justify-content: center;
+        position: absolute;
+    }
+    .enfoque h2{
+        font-size: 3.5rem;
+        margin-left: 205px;
+        margin-top: -280px;
+    }
+    .enfoque .linea-enfoque{
+        width: 70px;
+        margin-left: 205px;
+    }
+    .enfoque p{
+        text-align: end;
+        margin-left: 205px;
+        margin-top: 30px;
+        font-size: 1.4rem;
+    }
+    .enfoque p br{
+        display: block;
+    }
+    .contenedor-porque .contenedor-texto{
+        width: 300px;
+        height: 150px;
+        margin-top: 160px;
+        background-color: #0101019a;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.252);
+    }
+    .contenedor-texto h3{
+        font-size: 2.8rem;
+        margin-right: -70px;
+        margin-top: 140px;
+    }
+    .contenedor-texto .linea-nosotros{
+        width: 115px;
+        margin-left: 130px;
+    }
+    .contenedor-texto p{
+        font-size: 1.6rem;
+        margin-left: -30px;
+        margin-top: 30px;
+    }
+    .contenedor-texto p br{
+        display: block;
+    }
+    
+
+}
+
+/* Nuestro Enfoque */
+@media (max-width: 950px) {
+    .enfoque{
+        margin-right: 50px;
+    }
+}
+
+/* ¿Por qué Nosotros */
+    @media (max-width: 950px){
+        .contenedor-texto h3, .linea-nosotros{
+        margin-left: -45px;
+    }
+    .linea-nosotros{
+        margin-left: 165px;
+    }
+    .contenedor-porque .contenedor-texto{
+        font-size: 1rem;
+        padding-bottom: 150px;
+    }
 }

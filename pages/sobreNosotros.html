@@ -7,86 +7,139 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>LOPEREZ | Compañía Web</title>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="../index.html">LOPEREZ</a>
-            </div>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#inicio-pagina">Sobre Nosotros</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="./proyectos.html">Proyectos</a></li>
-            </ul>
-            <div>
-                <a href="./contacto.html" class="action_btn">Contactar</a>
-            </div>
-        </nav>
-    </header>
-    <!-- Main -->
-    <main>
-        <!-- Sobre Nosotros -->
-    <section class="contenedor-somos" id="inicio-pagina">
-        <div class="somos">
-            <h1>Somos FAMILIA.</h1>
-        </div>
-    </section>
-    <section class="texto-somos">
-        <div class="texto-h2">
-            <div class="linea-somos"></div>
-            <h2>
-                "Somos una empresa familiar venezolana con pasión por el diseño. Nuestra dedicación profesional nos impulsa a crear soluciones visuales impactantes y efectivas para nuestros clientes, reflejando la esencia de cada proyecto con creatividad y excelencia".
-            </h2>
-            <div class="linea-somos"></div>
-        </div>
-    </section>
-    </main>
-    <section class="contenedor-sobrenosotros">
-        <div class="imagen-sobre">
-            <img src="../images/Diseñador-web.png" alt="Imagen de Diseñador Web Adrián López">
-            <p>Diseñador Web</p>
-        </div>
-        <div class="imagen-sobre">
-            <img src="../images/Diseñador-grafico.jpeg" alt="Imagen de Diseñador Gráfico Reinaldo López">
-            <p>Diseñador Gráfico</p>
-        </div>
-        <div class="imagen-sobre">
-            <img src="../images/Editora-video.png" alt="Imagen de Editora de Vídeo Geraldine Pérez">
-            <p>Editora de Vídeo</p>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <section class="footer">
-            <div class="footer-top">
+    <div class="grid-container-nosotros">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar-desktop">
+                <div class="logo">
+                    <a href="../index.html">LOPEREZ</a>
+                </div>
                 <ul>
-                    <li class="footer-email">
-                        <a href="mailto:aalopezp2000@gmail.com">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </li>
-                    <li class="footer-whatsapp">
-                        <a href="https://wa.me/+591166670048" target="_blank">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </li>
-                    <li class="footer-instagram">
-                        <a href="https://www.instagram.com/adrianlolopez" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#inicio-pagina">Sobre Nosotros</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
                 </ul>
-            </div>
+                <div>
+                    <a href="./contacto.html" class="action_btn contactar">Contactar</a>
+                </div>
+            </nav>
+            <nav class="navbar  fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">LOPEREZ</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="max-width: 200px">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">LOPEREZ</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./sobreNosotros.html">Sobre Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./servicios.html">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./proyectos.html">Proyectos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Main -->
+        <main class="main" id="inicio-pagina">
+                <div class="somos">
+                    <h1>Somos FAMILIA</h1>
+                </div>
+        </main>
+        <section class="contenedor-article-somos">
+            <article class="texto-somos">
+                <div class="texto-h2">
+                    <!-- <div class="linea-somos"></div> -->
+                    <h2>
+                        "Somos una empresa familiar venezolana con pasión por el diseño. Nuestra dedicación profesional nos impulsa a crear soluciones visuales impactantes y efectivas para nuestros clientes, reflejando la esencia de cada proyecto con creatividad y excelencia".
+                    </h2>
+                    <!-- <div class="linea-somos"></div> -->
+                </div>
+            </article>
+            <article class="contenedor-sobrenosotros">
+                <div class="imagen-sobre">
+                    <img src="../images/Diseñador-web.png" alt="Imagen de Diseñador Web Adrián López">
+                    <p>Diseñador Web</p>
+                </div>
+                <div class="imagen-sobre">
+                    <img src="../images/Diseñador-grafico.jpeg" alt="Imagen de Diseñador Gráfico Reinaldo López">
+                    <p>Diseñador Gráfico</p>
+                </div>
+                <div class="imagen-sobre">
+                    <img src="../images/Editora-video.png" alt="Imagen de Editora de Vídeo Geraldine Pérez">
+                    <p>Editora de Vídeo</p>
+                </div>
+            </article>
         </section>
-        <div class="footer-bottom">
-            <div class="linea-footer"></div>
-            <p>&copy; 2023 LOPEREZ. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer-grid">
+            <section class="footer">
+                <div class="footer-top">
+                    <ul>
+                        <li class="footer-email">
+                            <a href="mailto:aalopezp2000@gmail.com">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li class="footer-whatsapp">
+                            <a href="https://wa.me/+591166670048" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="footer-instagram">
+                            <a href="https://www.instagram.com/adrianlolopez" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="footer-bottom">
+                <div class="linea-footer"></div>
+                <p>&copy; 2023 LOPEREZ. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener("scroll", function() {
+    const header = document.querySelector(".header");
+    const scrollPosition = window.scrollY;
+
+    if (window.innerWidth > 414) { // Solo aplica el efecto en pantallas más grandes que 414px de ancho
+        if (scrollPosition > 0) {
+            header.style.backgroundColor = "#000";
+        } else {
+            header.style.backgroundColor = "transparent";
+        }
+    } else {
+        // Restaura el color transparente en dispositivos móviles
+        header.style.backgroundColor = "transparent";
+    }
+    });
+    </script>
 </body>
 </html>
